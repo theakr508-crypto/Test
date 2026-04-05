@@ -1,9 +1,4 @@
-// 📱 MOBILE MENU TOGGLE
-function toggleMenu() {
-    document.querySelector("nav ul").classList.toggle("active");
-}
-
-// 📩 WHATSAPP FORM
+//  WHATSAPP FORM
 function handleContact(e) {
     e.preventDefault();
 
@@ -39,24 +34,6 @@ function handleContact(e) {
 
     // RESET FORM
     document.querySelector("form").reset();
-}
-
-// 📧 EMAIL BUTTON
-function sendEmail() {
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-
-    let mail = "mailto:your@email.com"
-        + "?subject=Security Service Inquiry"
-        + "&body="
-        + "Name: " + name + "%0a"
-        + "Phone: " + phone + "%0a"
-        + "Email: " + email + "%0a"
-        + "Requirement: " + message;
-
-    window.location.href = mail;
 }
 
 // ✨ SCROLL ANIMATION
@@ -99,5 +76,5 @@ function sendEmail() {
     window.location.href = mail;
 }
 function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("active");
+    document.querySelector(".nav-links").classList.toggle("active");
 }

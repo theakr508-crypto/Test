@@ -18,15 +18,28 @@
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="complaint.html">Complaint</a></li>
+  <li><a href="job.html">Apply Job</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
 
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Contact Durgesh Security Services</h1>
+        <h3>Get in Touch for Professional Security Solutions</h3>
+        <p>We are here to help you with all your security needs. Reach out to us today!</p>
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
 <section class="contact reveal">
     <h2>Hire Security Guards</h2>
+    <p>Fill out the form below to send us your requirements via WhatsApp or Email.</p>
 
     <div class="form-box">
         <form onsubmit="handleContact(event)">
@@ -47,20 +60,83 @@
             </div>
 
             <div class="input-group">
-                <textarea id="message"></textarea>
+                <select id="service">
+                    <option value="">Select Service</option>
+                    <option value="Security Guards">Security Guards</option>
+                    <option value="Corporate Security">Corporate Security</option>
+                    <option value="Residential Security">Residential Security</option>
+                    <option value="Event Security">Event Security</option>
+                </select>
+                <label>Service Type</label>
+            </div>
+
+            <div class="input-group">
+                <textarea id="message" required></textarea>
                 <label>Your Requirement</label>
             </div>
 
             <button type="submit" class="btn">Send via WhatsApp</button>
             <button type="button" class="btn secondary" onclick="sendEmail()">
-    Send via Email
-</button>
+                Send via Email
+            </button>
         </form>
     </div>
+</section>
 
-    <p>📧 Dcorporate@rediffmail.com</p>
-    <p>📍 New Market, Sarai Ganj, Muzaffarpur</p>
+<!-- CONTACT DETAILS -->
+<section class="reveal">
+    <h2>Contact Information</h2>
+    <div class="services">
+        <div class="card">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Phone</h3>
+            <p>+91 7764944794</p>
+            <p>Available 24/7</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>Dcorporate@rediffmail.com</p>
+            <p>Response within 24 hours</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-map-marker-alt"></i>
+            <h3>Address</h3>
+            <p>New Market, Sarai Ganj</p>
+            <p>Muzaffarpur, Bihar, India</p>
+        </div>
+    </div>
+</section>
 
+<!-- OFFICE HOURS -->
+<section class="reveal">
+    <h2>Office Hours</h2>
+    <p><strong>Monday - Saturday:</strong> 9:00 AM - 6:00 PM</p>
+    <p><strong>Sunday:</strong> Closed</p>
+    <p><strong>Emergency Contact:</strong> Available 24/7 for urgent security needs</p>
+</section>
+
+<!-- LOCATION MAP -->
+<section class="reveal">
+    <h2>Our Location</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7164.36185959714!2d85.37959456443788!3d26.125643083304325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed10f10a15a3c5%3A0x7b3790bfdf172a14!2sNew%20Market%2C%20Saraiyaganj%2C%20Muzaffarpur!5e0!3m2!1sen!2sin!4v1775369619908!5m2!1sen!2sin"
+            title="Durgesh Security Services location map"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<!-- WHY CONTACT US -->
+<section class="reveal">
+    <h2>Why Contact Us?</h2>
+    <p>✔ Experienced team with 30+ years in security</p>
+    <p>✔ Quick response and professional service</p>
+    <p>✔ Customized security solutions</p>
+    <p>✔ Trusted by businesses and residents</p>
 </section>
 
 <div id="successPopup">✅ Message sent!</div>

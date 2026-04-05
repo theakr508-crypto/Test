@@ -13,7 +13,7 @@ function handleContact(e) {
         return;
     }
 
-    let url = "https://wa.me/97764944794?text="
+    let url = "https://wa.me/917764944794?text="
         + "Name: " + name + "%0a"
         + "Phone: " + phone + "%0a"
         + (email ? "Email: " + email + "%0a" : "")
@@ -110,3 +110,4 @@ function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("active");
     document.querySelector(".menu-toggle").classList.toggle("active");
 }
+

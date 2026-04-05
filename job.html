@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply Job | Durgesh Security</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Durgesh Security</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="complaint.html">Complaint</a></li>
+  <li><a href="job.html">Apply Job</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Join Our Security Team</h1>
+        <h3>Become a Professional Security Guard</h3>
+        <p>Apply now for rewarding career opportunities in security services.</p>
+    </div>
+</section>
+
+<!-- JOB APPLICATION FORM -->
+<section class="reveal">
+    <h2>Security Guard Job Application</h2>
+    <p>Fill out the form below to apply for a security guard position. We require trained and reliable personnel.</p>
+
+    <div class="form-box">
+        <form id="jobForm">
+
+            <div class="input-group">
+                <input type="text" id="fullname" required>
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="age" min="18" max="60" required>
+                <label>Age</label>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" id="phone" required>
+                <label>Phone Number</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email">
+                <label>Email (optional)</label>
+            </div>
+
+            <div class="input-group">
+                <textarea id="experience" rows="4"></textarea>
+                <label>Experience (if any)</label>
+            </div>
+
+            <!-- Resume Upload -->
+            <div class="input-group">
+                <input type="file" id="resume" accept=".pdf,.doc,.docx">
+                <label>Upload Resume (PDF/DOC) - optional</label>
+            </div>
+
+            <button type="submit" class="btn">Apply Now</button>
+        </form>
+    </div>
+</section>
+
+<!-- JOB REQUIREMENTS -->
+<section class="reveal">
+    <h2>Job Requirements</h2>
+    <p><strong>Qualifications:</strong></p>
+    <ul>
+        <li>Age 18-60 years</li>
+        <li>Minimum 10th grade education</li>
+        <li>Good physical health</li>
+        <li>No criminal record</li>
+        <li>Disciplined and responsible</li>
+    </ul>
+    <p><strong>Benefits:</strong></p>
+    <ul>
+        <li>Competitive salary</li>
+        <li>Training provided</li>
+        <li>Uniform and equipment</li>
+        <li>Opportunities for growth</li>
+    </ul>
+</section>
+
+<!-- WHY JOIN US -->
+<section class="reveal">
+    <h2>Why Join Durgesh Security?</h2>
+    <p>✔ Established company with 30+ years experience</p>
+    <p>✔ Professional training and development</p>
+    <p>✔ Stable job with good pay</p>
+    <p>✔ Work in a respected field</p>
+</section>
+
+<footer>
+    <p>© 2026 Durgesh Security Services Pvt. Ltd. | All Rights Reserved</p>
+</footer>
+
+<!-- LOADING SCREEN -->
+<div id="loader" class="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint | Durgesh Security</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Durgesh Security</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="complaint.html">Complaint</a></li>
+  <li><a href="job.html">Apply Job</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>File a Complaint</h1>
+        <h3>Your Feedback Helps Us Improve</h3>
+        <p>We take complaints seriously and strive to resolve issues promptly.</p>
+    </div>
+</section>
+
+<!-- COMPLAINT FORM -->
+<section class="reveal">
+    <h2>Submit Your Complaint</h2>
+    <p>Please provide details about your issue. We will investigate and respond within 48 hours.</p>
+
+    <div class="form-box">
+        <form id="complaintForm">
+
+            <div class="input-group">
+                <input type="text" id="fullname" placeholder="Enter your full name" required>
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label>Email Address</label>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+                <label>Phone Number</label>
+            </div>
+
+            <div class="input-group">
+                <select id="complainttype" required>
+                    <option value="">Select issue type</option>
+                    <option value="Security Issue">Security Issue</option>
+                    <option value="Staff Behavior">Staff Behavior</option>
+                    <option value="Service Delay">Service Delay</option>
+                    <option value="Billing Issue">Billing Issue</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label>Complaint Type</label>
+            </div>
+
+            <div class="input-group">
+                <textarea id="details" rows="5" placeholder="Describe your issue in detail..." required></textarea>
+                <label>Complaint Details</label>
+            </div>
+
+            <button type="submit" class="btn">Submit Complaint</button>
+        </form>
+    </div>
+</section>
+
+<!-- COMPLAINT PROCESS -->
+<section class="reveal">
+    <h2>How We Handle Complaints</h2>
+    <div class="services">
+        <div class="card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Quick Response</h3>
+            <p>Acknowledgment within 24 hours</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-search"></i>
+            <h3>Investigation</h3>
+            <p>Thorough review of the issue</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-check"></i>
+            <h3>Resolution</h3>
+            <p>Timely resolution and follow-up</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT FOR URGENT ISSUES -->
+<section class="reveal">
+    <h2>Urgent Issues?</h2>
+    <p>For immediate concerns, contact us directly:</p>
+    <p><strong>Phone:</strong> +91 7764944794</p>
+    <p><strong>Email:</strong> Dcorporate@rediffmail.com</p>
+    <p><strong>Address:</strong> New Market, Sarai Ganj, Muzaffarpur</p>
+</section>
+
+<footer>
+    <p>© 2026 Durgesh Security Services Pvt. Ltd. | All Rights Reserved</p>
+</footer>
+
+<!-- LOADING SCREEN -->
+<div id="loader" class="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

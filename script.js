@@ -18,7 +18,7 @@ function handleContact(e) {
         return;
     }
 
-    let url = "https://wa.me/91XXXXXXXXXX?text="
+    let url = "https://wa.me/97764944794?text="
         + "Name: " + name + "%0a"
         + "Phone: " + phone + "%0a"
         + (email ? "Email: " + email + "%0a" : "")

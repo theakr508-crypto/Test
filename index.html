@@ -12,21 +12,17 @@
 <body>
 
 <!-- NAVBAR -->
-<nav>
-    <h2>Durgesh Security</h2>
+<nav class="navbar">
+  <div class="logo">Durgesh Security</div>
 
-    <!-- MENU BUTTON -->
-    <div class="menu-btn" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-    <!-- MENU -->
-    <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 <!-- HERO -->
 <section class="hero">
@@ -36,7 +32,7 @@
         <p>Providing Professional Security Guards Across Muzaffarpur & Nearby Regions</p>
 
         <a href="contact.html" class="btn">Hire Security Guards</a>
-        <a href="tel:+91XXXXXXXXXX" class="btn">Call Now</a>
+        <a href="tel:+917764944794" class="btn">Call Now</a>
     </div>
 </section>
 
@@ -173,7 +169,7 @@
 
     <p><strong>📍 Address:</strong> New Market, Sarai Ganj, Muzaffarpur, Bihar</p>
     <p><strong>📧 Email:</strong> Dcorporate@rediffmail.com</p>
-    <p><strong>📞 Phone:</strong> +91XXXXXXXXXX</p>
+    <p><strong>📞 Phone:</strong> +917764944794</p>
 </section>
 
 <!-- CALL TO ACTION -->
@@ -190,11 +186,12 @@
 </footer>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">
+<a href="https://wa.me/917764944794" class="whatsapp">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 <script src="script.js"></script>
 
+<div class="menu-toggle" onclick="toggleMenu(this)">☰</div>
 </body>
 </html>

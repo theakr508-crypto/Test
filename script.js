@@ -51,14 +51,45 @@ function revealOnScroll() {
 }
 
 window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll); // Trigger on load as well
 
 // ⏳ LOADING SCREEN
-window.addEventListener("load", () => {
+function hideLoader() {
     let loader = document.getElementById("loader");
     if (loader) {
         loader.style.display = "none";
     }
+}
+
+window.addEventListener("load", hideLoader);
+document.addEventListener("DOMContentLoaded", hideLoader); // Also hide on DOM ready
+
+// Fallback: hide loader after 3 seconds
+setTimeout(hideLoader, 3000);
+
+// NAVIGATION LOADING
+document.addEventListener("DOMContentLoaded", () => {
+    const pageLinks = document.querySelectorAll('a[href*=".html"]');
+    pageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            showLoader(href);
+        });
+    });
 });
+
+function showLoader(targetUrl) {
+    const loader = document.getElementById("loader");
+    if (loader) {
+        loader.style.display = "flex";
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 1000); // 1 second delay
+    } else {
+        window.location.href = targetUrl;
+    }
+}
 function sendEmail() {
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
@@ -77,4 +108,5 @@ function sendEmail() {
 }
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("active");
+    document.querySelector(".menu-toggle").classList.toggle("active");
 }

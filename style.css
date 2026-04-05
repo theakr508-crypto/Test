@@ -1,0 +1,413 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #00d4ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+/* MENU BUTTON */
+.menu-btn {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('images/guard.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 25px;
+    background: #00d4ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* SECTION */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card i {
+    font-size: 35px;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* HIRE BUTTON */
+.hire-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00d4ff;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hire-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* ABOUT */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CONTACT */
+.contact input,
+.contact textarea {
+    width: 80%;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    padding: 12px 20px;
+    background: #00d4ff;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* MOBILE DESIGN */
+@media(max-width: 768px) {
+
+    nav {
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background: #111;
+        width: 200px;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 95%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* FORM BOX */
+.form-box {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* LABEL */
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: gray;
+    font-size: 14px;
+    transition: 0.3s;
+    background: white;
+    padding: 0 5px;
+}
+
+/* FLOAT EFFECT */
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+    top: -8px;
+    font-size: 12px;
+    color: #00d4ff;
+}
+
+/* BUTTON STYLES */
+.btn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn.secondary {
+    background: black;
+    color: white;
+}
+#successPopup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00d4ff;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+@media(max-width: 768px) {
+
+    .form-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}
+.form-box:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('images/hero.jpg') center/cover no-repeat;
+}
+.btn.secondary {
+    background: black;
+    color: white;
+}
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 15px 20px;
+}
+
+/* MENU LINKS */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MENU BUTTON */
+.menu-btn {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* MOBILE VIEW */
+@media(max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: black;
+        width: 200px;
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}

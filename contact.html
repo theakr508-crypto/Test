@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Durgesh Security</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>Durgesh Security</h2>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
+
+<section class="contact reveal">
+    <h2>Hire Security Guards</h2>
+
+    <div class="form-box">
+        <form onsubmit="handleContact(event)">
+
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label>Your Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" id="phone" required>
+                <label>Phone Number</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email">
+                <label>Email (optional)</label>
+            </div>
+
+            <div class="input-group">
+                <textarea id="message"></textarea>
+                <label>Your Requirement</label>
+            </div>
+
+            <button type="submit" class="btn">Send via WhatsApp</button>
+            <button type="button" class="btn secondary" onclick="sendEmail()">
+    Send via Email
+</button>
+        </form>
+    </div>
+
+    <p>📧 Dcorporate@rediffmail.com</p>
+    <p>📍 New Market, Sarai Ganj, Muzaffarpur</p>
+
+</section>
+
+<div id="successPopup">✅ Message sent!</div>
+
+<footer>
+    <p>© 2026 Durgesh Security Services Pvt. Ltd.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

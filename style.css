@@ -425,3 +425,158 @@ img {
   font-size: 13px;
   color: #64748b;
 }
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #020617;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loader h1 {
+  color: #38bdf8;
+  font-size: 2rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+.contact-options {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* OPTIONS BOX */
+.options-box {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.options-box.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* LINKS */
+.options-box a {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.options-box a:hover {
+  background: #38bdf8;
+  color: black;
+}
+/* POPUP BACKGROUND */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+/* SHOW POPUP */
+.popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* POPUP BOX */
+.popup-content {
+  background: #020617;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  animation: scaleUp 0.3s ease;
+}
+
+/* BUTTONS */
+.popup-btn {
+  display: block;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  background: #25D366;
+}
+
+/* EMAIL */
+.email-btn {
+  background: #38bdf8;
+}
+
+/* HOVER */
+.popup-btn:hover {
+  transform: scale(1.05);
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* MAIN CONTENT WRAPPER */
+.main-content {
+  flex: 1;
+}

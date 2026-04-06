@@ -34,3 +34,40 @@ window.addEventListener("scroll", revealOnScroll);
 
 // ⚡ IMPORTANT: RUN ON PAGE LOAD ALSO
 window.addEventListener("load", revealOnScroll);
+// LOADER
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
+  }, 1500);
+});
+function toggleOptions() {
+  const box = document.getElementById("optionsBox");
+
+  if (box.style.display === "flex") {
+    box.style.display = "none";
+  } else {
+    box.style.display = "flex";
+  }
+}
+function toggleOptions() {
+  document.getElementById("optionsBox").classList.toggle("show");
+}
+function openPopup() {
+  document.getElementById("popup").classList.add("active");
+}
+
+function closePopup() {
+  document.getElementById("popup").classList.remove("active");
+}
+
+// CLOSE ON OUTSIDE CLICK
+window.addEventListener("click", function(e) {
+  const popup = document.getElementById("popup");
+
+  if (e.target === popup) {
+    popup.classList.remove("active");
+  }
+});

@@ -1,61 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Durgesh Security</title>
-
+<title>About -Durgesh Security Services</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-<h2>Durgesh Security</h2>
+<nav><h1>Durgesh Security Services</h1>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <ul id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="complaint.html">Complaint</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="apply.html">Apply Job</a></li>
+  </ul> </nav>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-<ul id="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="apply.html">Apply</a></li>
-<li><a href="complaint.html">Complaint</a></li>
-</ul>
-</nav>
+<section class="page">
 
-<!-- ABOUT CONTENT -->
-<section class="page-section">
-<h1>About Our Company</h1>
+  <h1>About Company</h1>
 
-<div class="about-box">
-<img src="images/about.jpg">
+  <p>
+    Durgesh Security Services Pvt. Ltd. is a well-established and trusted 
+    security service provider, operating since 1993. With over three decades 
+    of experience, the company has built a strong reputation for reliability, 
+    professionalism, and quality service.
+  </p>
 
-<div>
-<p>
-Durgesh Security Services Pvt. Ltd. has been providing trusted security
-services since 1993 in Muzaffarpur and surrounding areas.
-</p>
+  <div class="cards">
 
-<p>
-We specialize in trained and disciplined guards for residential,
-commercial, and event security.
-</p>
+    <div class="card">
+      <h2>Company Details</h2>
+      <p><strong>Name:</strong> Durgesh Security Services Pvt. Ltd.</p>
+      <p><strong>CIN:</strong> U00898JH1993PTC005585</p>
+      <p><strong>Status:</strong> Active</p>
+      <p><strong>Company Type:</strong> Private Limited</p>
+    </div>
 
-<p>
-Our mission is to ensure safety, trust, and professionalism
-in every service we provide.
-</p>
-</div>
-</div>
+    <div class="card">
+      <h2>Financial Details</h2>
+      <p><strong>Authorized Capital:</strong> ₹2,00,000</p>
+      <p><strong>Paid-up Capital:</strong> ₹1,01,500</p>
+    </div>
+
+    <div class="card">
+      <h2>Management</h2>
+      <p><strong>Directors:</strong></p>
+      <ul>
+        <li>Durgesh Kumar</li>
+        <li>Chandra Shekhar Singh</li>
+      </ul>
+    </div>
+
+  </div>
 
 </section>
+<section class="page">
+  <h2>Our Location</h2>
 
-<script src="script.js"></script>
-<a href="https://wa.me/917764944794" class="whatsapp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
+  <div class="map-container">
+    <iframe 
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.8149421346957!2d85.38603317447536!3d26.125648193472554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed10f10a15a3c5%3A0x7b3790bfdf172a14!2sNew%20Market%2C%20Saraiyaganj%2C%20Muzaffarpur!5e1!3m2!1sen!2sin!4v1775457341297!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>=embed"
+      width="100%" 
+      height="300" 
+      style="border:0; border-radius: 12px;"
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
 </body>
 </html>

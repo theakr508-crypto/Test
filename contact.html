@@ -1,24 +1,46 @@
-<section class="page-section">
-<h1>Contact Us</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Durgesh Security Services</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-<form class="form-box" onsubmit="sendWhatsApp(event)">
+<body>
 
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="phone" placeholder="Phone Number" required>
-<input type="email" id="email" placeholder="Email (optional)">
-<textarea id="message" placeholder="Your Requirement"></textarea>
+<nav>
+  <h1>Durgesh Security Services</h1>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <ul id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="complaint.html">Complaint</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-<button class="btn">Send via WhatsApp</button>
-<button type="button" onclick="sendEmail()" class="btn secondary">Send via Email</button>
+<section class="page">
+  <h1>Contact Us</h1>
 
-</form>
-<div id="successPopup" class="popup">
-    <p>✅ Submitted Successfully!</p>
-</div>
+  
 
-<div class="contact-info">
-<p>📍 Muzaffarpur, Bihar</p>
-<p>📧 Dcorporate@rediffmail.com</p>
-<p>📞 +91XXXXXXXXXX</p>
-</div>
+  <form class="form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+
 </section>
+<div class="card">
+    <p><strong>Company:</strong> Durgesh Security Services Pvt. Ltd.</p>
+    <p><strong>Location:</strong> Muzaffarpur, Bihar</p>
+    <p><strong>Phone:</strong> +91 XXXXXXXX</p>
+    <p><strong>Email:</strong> example@email.com</p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

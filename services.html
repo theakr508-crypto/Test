@@ -3,139 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Durgesh Security</title>
-
+<title>Services - Durgesh Security Services</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">Durgesh Security</div>
+<nav><h1>Durgesh Security Services</h1>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <ul id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="complaint.html">Complaint</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="apply.html">Apply Job</a></li>
+  </ul> </nav>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<section class="page">
+  <h1>Our Services</h1>
 
-  <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="services.html">Services</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="complaint.html">Complaint</a></li>
-  <li><a href="job.html">Apply Job</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>Our Security Services</h1>
-        <h3>Comprehensive Protection Solutions</h3>
-        <p>Professional security services tailored to your needs.</p>
+  <div class="cards">
+    <div class="card reveal">
+      <h2>Security Guards</h2>
+      <p>Highly trained guards for homes, offices & industries.</p>
     </div>
-</section>
 
-<!-- SERVICES -->
-<section class="reveal">
-    <h2>Our Professional Services</h2>
-
-    <div class="services">
-
-        <div class="card">
-            <i class="fa-solid fa-user-shield"></i>
-            <h3>Security Guards</h3>
-            <p>Trained and verified guards for homes, offices, and events. 24/7 availability.</p>
-            <a href="contact.html" class="hire-btn">Hire Now</a>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-building-shield"></i>
-            <h3>Corporate Security</h3>
-            <p>Complete security solutions for offices, banks, and institutions. Access control and surveillance.</p>
-            <a href="contact.html" class="hire-btn">Hire Now</a>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-people-roof"></i>
-            <h3>Residential Security</h3>
-            <p>Safety and protection for homes, apartments, and residential complexes.</p>
-            <a href="contact.html" class="hire-btn">Hire Now</a>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-calendar-check"></i>
-            <h3>Event Security</h3>
-            <p>Professional security for weddings, concerts, and public events. Crowd management.</p>
-            <a href="contact.html" class="hire-btn">Hire Now</a>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-truck"></i>
-            <h3>Cash Van Security</h3>
-            <p>Armed security for cash transportation and valuable shipments.</p>
-            <a href="contact.html" class="hire-btn">Hire Now</a>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-industry"></i>
-            <h3>Industrial Security</h3>
-            <p>Security for factories, warehouses, and industrial facilities.</p>
-            <a href="contact.html" class="hire-btn">Hire Now</a>
-        </div>
-
+    <div class="card reveal">
+      <h2>Surveillance Systems</h2>
+      <p>CCTV installation & 24/7 monitoring.</p>
     </div>
-</section>
 
-<!-- WHY CHOOSE US -->
-<section class="reveal">
-    <h2>Why Choose Our Services?</h2>
-    <p>✔ 30+ Years of Experience</p>
-    <p>✔ Trained & Verified Personnel</p>
-    <p>✔ 24/7 Customer Support</p>
-    <p>✔ Competitive Pricing</p>
-    <p>✔ Customized Solutions</p>
-    <p>✔ Quick Response Time</p>
-</section>
-
-<!-- SERVICE PROCESS -->
-<section class="reveal">
-    <h2>Our Service Process</h2>
-    <div class="services">
-        <div class="card">
-            <i class="fa-solid fa-phone"></i>
-            <h3>Contact Us</h3>
-            <p>Get in touch with your requirements</p>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-clipboard-check"></i>
-            <h3>Assessment</h3>
-            <p>We assess your security needs</p>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-users"></i>
-            <h3>Deployment</h3>
-            <p>Trained guards deployed to your location</p>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-shield-alt"></i>
-            <h3>Monitoring</h3>
-            <p>Ongoing supervision and support</p>
-        </div>
+    <div class="card reveal">
+      <h2>Event Security</h2>
+      <p>Professional security for events & gatherings.</p>
     </div>
+  </div>
 </section>
-
-<footer>
-    <p>© 2026 SecureHome | All Rights Reserved</p>
-</footer>
-
-<!-- LOADING SCREEN -->
-<div id="loader" class="loader">
-    <div class="spinner"></div>
-    <p>Loading...</p>
-</div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

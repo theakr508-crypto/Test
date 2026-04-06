@@ -1,113 +1,158 @@
-//  WHATSAPP FORM
-function handleContact(e) {
+// ================= MENU =================
+function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    if (nav) nav.classList.toggle("active");
+}
+
+// ================= WHATSAPP FORM =================
+function sendWhatsApp(e) {
     e.preventDefault();
 
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let email = document.getElementById("email").value;
-    let service = document.getElementById("service") ? document.getElementById("service").value : "";
-    let message = document.getElementById("message").value;
+    let name = document.getElementById("name")?.value || "";
+    let phone = document.getElementById("phone")?.value || "";
+    let message = document.getElementById("message")?.value || "";
 
-    if (name === "" || phone === "") {
+    let url = "https://wa.me/917764944794?text="
+        + "Name: " + encodeURIComponent(name)
+        + "%0aPhone: " + encodeURIComponent(phone)
+        + "%0aMessage: " + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+// ================= EMAIL =================
+function sendEmail() {
+    let name = document.getElementById("name")?.value || "";
+    let phone = document.getElementById("phone")?.value || "";
+    let email = document.getElementById("email")?.value || "";
+    let message = document.getElementById("message")?.value || "";
+
+    let mail = "mailto:Dcorporate@rediffmail.com"
+        + "?subject=Security Inquiry"
+        + "&body="
+        + "Name: " + encodeURIComponent(name) + "%0a"
+        + "Phone: " + encodeURIComponent(phone) + "%0a"
+        + "Email: " + encodeURIComponent(email) + "%0a"
+        + "Message: " + encodeURIComponent(message);
+
+    window.location.href = mail;
+}
+
+// ================= SLIDER =================
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.getElementById("slider");
+    const slidesContainer = document.getElementById("slides");
+    const dotsContainer = document.getElementById("dots");
+
+    if (!slider || !slidesContainer || !dotsContainer) return;
+
+    const slides = slidesContainer.querySelectorAll("img");
+    let index = 0;
+    let total = slides.length;
+    let autoSlide;
+
+    // CREATE DOTS
+    slides.forEach((_, i) => {
+        let dot = document.createElement("span");
+        dot.addEventListener("click", () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    function updateSlider() {
+        slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+
+        let dots = dotsContainer.querySelectorAll("span");
+        dots.forEach(d => d.classList.remove("active"));
+        if (dots[index]) dots[index].classList.add("active");
+    }
+
+    function moveSlide(step) {
+        index = (index + step + total) % total;
+        updateSlider();
+    }
+
+    function goToSlide(i) {
+        index = i;
+        updateSlider();
+    }
+
+    // AUTO SLIDE
+    function startAuto() {
+        autoSlide = setInterval(() => moveSlide(1), 3000);
+    }
+
+    function stopAuto() {
+        clearInterval(autoSlide);
+    }
+
+    // PAUSE ON HOVER
+    slider.addEventListener("mouseenter", stopAuto);
+    slider.addEventListener("mouseleave", startAuto);
+
+    // TOUCH SWIPE
+    let startX = 0;
+
+    slider.addEventListener("touchstart", e => {
+        startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchend", e => {
+        let endX = e.changedTouches[0].clientX;
+
+        if (startX - endX > 50) moveSlide(1);
+        if (endX - startX > 50) moveSlide(-1);
+    });
+
+    // ARROWS (SAFE BIND)
+    window.moveSlide = moveSlide;
+
+    // INIT
+    updateSlider();
+    startAuto();
+});
+/* SUCCESS POPUP */
+function showPopup(){
+    const popup = document.getElementById("successPopup");
+    if(!popup) return;
+
+    popup.style.display = "block";
+
+    setTimeout(()=>{
+        popup.style.display = "none";
+    }, 2000);
+}
+
+/* UPDATE WHATSAPP */
+function sendWhatsApp(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name")?.value || "";
+    let phone = document.getElementById("phone")?.value || "";
+    let message = document.getElementById("message")?.value || "";
+
+    if(!name || !phone){
         alert("Please fill required fields");
         return;
     }
 
+    showPopup();
+
     let url = "https://wa.me/917764944794?text="
-        + "Name: " + name + "%0a"
-        + "Phone: " + phone + "%0a"
-        + (email ? "Email: " + email + "%0a" : "")
-        + (service ? "Service: " + service + "%0a" : "")
-        + "Requirement: " + message;
+    + "Name: " + encodeURIComponent(name)
+    + "%0aPhone: " + encodeURIComponent(phone)
+    + "%0aMessage: " + encodeURIComponent(message);
 
-    window.open(url, "_blank");
-
-    // SUCCESS POPUP
-    let popup = document.getElementById("successPopup");
-    if (popup) {
-        popup.style.display = "block";
-
-        setTimeout(() => {
-            popup.style.display = "none";
-        }, 3000);
-    }
-
-    // RESET FORM
-    document.querySelector("form").reset();
+    setTimeout(()=>{
+        window.open(url, "_blank");
+    }, 1000);
 }
-
-// ✨ SCROLL ANIMATION
-function revealOnScroll() {
-    let elements = document.querySelectorAll(".reveal");
-
-    elements.forEach((el) => {
-        let windowHeight = window.innerHeight;
-        let elementTop = el.getBoundingClientRect().top;
-
-        if (elementTop < windowHeight - 100) {
-            el.classList.add("active");
+window.addEventListener("scroll",()=>{
+    document.querySelectorAll(".reveal").forEach(el=>{
+        let top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
         }
     });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll); // Trigger on load as well
-
-// ⏳ LOADING SCREEN
-function hideLoader() {
-    let loader = document.getElementById("loader");
-    if (loader) {
-        loader.style.display = "none";
-    }
-}
-
-window.addEventListener("load", hideLoader);
-document.addEventListener("DOMContentLoaded", hideLoader); // Also hide on DOM ready
-
-// Fallback: hide loader after 3 seconds
-setTimeout(hideLoader, 3000);
-
-// NAVIGATION LOADING
-document.addEventListener("DOMContentLoaded", () => {
-    const pageLinks = document.querySelectorAll('a[href*=".html"]');
-    pageLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            showLoader(href);
-        });
-    });
 });
-
-function showLoader(targetUrl) {
-    const loader = document.getElementById("loader");
-    if (loader) {
-        loader.style.display = "flex";
-        setTimeout(() => {
-            window.location.href = targetUrl;
-        }, 1000); // 1 second delay
-    } else {
-        window.location.href = targetUrl;
-    }
-}
-function sendEmail() {
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-
-    let mail = "mailto:Dcorporate@rediffmail.com"
-        + "?subject=Security Service Inquiry"
-        + "&body="
-        + "Name: " + name + "%0a"
-        + "Phone: " + phone + "%0a"
-        + "Email: " + email + "%0a"
-        + "Requirement: " + message;
-
-    window.location.href = mail;
-}
-function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
-    document.querySelector(".menu-toggle").classList.toggle("active");
-}
-

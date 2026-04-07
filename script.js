@@ -1,6 +1,10 @@
 // MENU TOGGLE
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+  const menu = document.getElementById("navLinks");
+
+  if (menu) {
+    menu.classList.toggle("active");
+  }
 }
 
 // SCROLL ANIMATION (FIXED)
@@ -70,4 +74,37 @@ window.addEventListener("click", function(e) {
   if (e.target === popup) {
     popup.classList.remove("active");
   }
+});
+// LOADER + PAGE LOAD
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  document.body.classList.add("loaded");
+
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
+  }, 1600);
+});
+
+// PAGE TRANSITION ON CLICK
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    // ignore external or anchor links
+    if (href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel")) {
+      return;
+    }
+
+    e.preventDefault();
+
+    const loader = document.getElementById("loader");
+    loader.style.opacity = "1";
+    loader.style.visibility = "visible";
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 600);
+  });
 });

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complaint | Durgesh Security Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Durgesh Security Services home">
+        <span class="brand-mark">D</span>
+        <span>Durgesh Security</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a class="active" href="complaint.html">Complaint</a>
+        <a href="contact.html">Contact</a>
+        <a href="apply.html">Apply Job</a>
+      </nav>
+      <a class="header-cta" href="contact.html">Hire Security</a>
+    </header>
+
+    <main>
+      <section class="contact-hero simple-page">
+        <div class="contact-intro reveal">
+          <p class="eyebrow">Complaint form</p>
+          <h1>Report an issue so the team can review it properly.</h1>
+          <p>Share the concern, location, date, and any file that helps explain the issue. Clear details help us respond faster.</p>
+        </div>
+        <form class="contact-form reveal">
+          <label>
+            Your name
+            <input type="text" placeholder="Full name" required />
+          </label>
+          <label>
+            Email address
+            <input type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Describe your issue
+            <textarea placeholder="Write the complaint details"></textarea>
+          </label>
+          <label>
+            Attachment
+            <input type="file" />
+          </label>
+          <button class="btn primary" type="submit">Submit Complaint</button>
+        </form>
+      </section>
+    </main>
+
+    <a href="https://wa.me/917764944794" class="whatsapp" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.025-5.111-2.893-6.98-1.87-1.868-4.351-2.897-6.98-2.898-5.443 0-9.87 4.42-9.874 9.859-.001 1.761.472 3.483 1.371 5.03l-.995 3.636 3.738-.981.161.096zM17.07 14.77c-.274-.138-1.62-.8-1.874-.892-.254-.093-.44-.138-.624.137-.184.275-.713.892-.874 1.077-.161.184-.322.206-.596.069-.274-.138-1.16-.427-2.21-1.365-.817-.73-1.37-1.63-1.53-1.905-.16-.275-.017-.424.12-.561.124-.123.275-.321.412-.481.137-.16.183-.275.274-.458.09-.183.046-.344-.023-.481-.069-.138-.624-1.503-.855-2.062-.225-.54-.472-.467-.649-.476-.168-.008-.36-.01-.553-.01-.193 0-.507.073-.772.36-.265.287-1.011.988-1.011 2.408s1.025 2.793 1.17 2.987c.144.195 2.016 3.078 4.885 4.316.683.294 1.218.47 1.634.602.686.218 1.312.187 1.806.114.55-.082 1.62-.662 1.848-1.27.228-.607.228-1.126.16-1.235-.069-.109-.254-.154-.528-.292z"/>
+      </svg>
+    </a>
+
+    <footer class="footer">
+      <h3>Durgesh Security Services Pvt. Ltd.</h3>
+      <p>Providing trusted security solutions since 1993</p>
+      <p class="copy">&copy; 2026 All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
